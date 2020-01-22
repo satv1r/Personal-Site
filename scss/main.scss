@@ -1,5 +1,39 @@
+@import "config";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #455a64;
+}
+
+header {
+  height: 95vh;
+  .container {
+    padding-top: 10rem;
+    max-width: $container-width;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .text {
+      h1 {
+        font-size: 10rem;
+      }
+    }
+  }
+
+  model-viewer {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+footer {
+  height: 5vh;
 }

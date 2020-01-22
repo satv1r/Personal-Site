@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
     <link rel="stylesheet" href="css/main.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>Satvir.</h1>
-    <p>Junior Front End Developer</p>
+    <header>
+      <div class="container">
+        <div class="text">
+          <h1>Satvir.</h1>
+          <p>Junior Front End Developer</p>
+        </div>
+        <div class="model">
+          <model-viewer
+            src="../assets/models/earth.gltf"
+            alt="A 3D model of Earth"
+            auto-rotate
+            background-color="#455A64"
+            auto-rotate-delay="0"
+          ></model-viewer>
+        </div>
+      </div>
+    </header>
+    <footer>
+      Thanks.
+    </footer>
   </body>
 </html>
