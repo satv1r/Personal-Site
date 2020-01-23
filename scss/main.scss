@@ -11,61 +11,80 @@ body {
 }
 
 header {
+  position: relative;
   height: 95vh;
   .container {
-    padding-top: 10rem;
     max-width: $container-width;
     margin: 0 auto;
     text-align: center;
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    align-content: center;
     .text {
+      position: relative;
+      z-index: 1;
       font-family: "Crete Round", serif;
       h1 {
+        span {
+          transition: 3s ease-in-out;
+          &:hover {
+            color: darkturquoise;
+            transition: 0.25s ease-in-out;
+          }
+        }
         font-size: 12rem;
         color: $main-color;
-        animation: h1fly 5s forwards ease-out;
+        opacity: 0;
+        animation: h1fly 2s forwards ease-out;
+        animation-delay: 0.5s;
       }
 
       .subtext {
-        animation: h1fly 5s forwards ease-out;
+        animation: h1fly 2s forwards ease-out;
+        animation-delay: 0.5s;
+        opacity: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        z-index: 1;
         p {
           color: $main-color;
           display: inline-block;
         }
         .icons {
           i {
+            z-index: 1;
             color: $main-color;
             display: inline-block;
             padding: 0 0.5rem;
+            transition: 1s ease-in;
+            &:hover {
+              color: turquoise;
+              transition: 1s ease-in-out;
+            }
           }
         }
       }
     }
+    model-viewer {
+      animation: modelfly 2s forwards ease-out;
+      animation-delay: 0.5s;
+      opacity: 0;
+      width: 500px;
+      height: 500px;
+      text-align: left;
+    }
   }
 
-  model-viewer {
-    animation: modelfly 1s forwards ease-out;
-    animation-delay: 4s;
-    transform: translateX(-350px);
-    width: 400px;
-    height: 400px;
-  }
-}
-
-header {
-  position: relative;
-  #particles-js {
-    position: absolute;
+  .header-particles {
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
+    z-index: 0;
   }
 }
 
@@ -83,28 +102,41 @@ footer {
 
 @keyframes h1fly {
   0% {
-    transform: translateX(-1000px);
-  }
-
-  80% {
-    transform: translateX(-1000px);
+    transform: translateY(-100px);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes modelfly {
   0% {
-    transform: translateX(-350px);
+    transform: translateX(3000px);
+    opacity: 1;
   }
-
   50% {
-    transform: translateX(-350px);
+    transform: translateX(1000px);
+    opacity: 1;
   }
 
   100% {
-    display: block;
     transform: translateX(0);
+    opacity: 1;
   }
 }
+
+@keyframes getLost {
+  99% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    transform: translateX(1000px);
+  }
+}
+
+@import "media";
