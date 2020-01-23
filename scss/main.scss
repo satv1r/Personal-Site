@@ -26,9 +26,11 @@ header {
       h1 {
         font-size: 12rem;
         color: $main-color;
+        animation: h1fly 5s forwards ease-out;
       }
 
       .subtext {
+        animation: h1fly 5s forwards ease-out;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -48,11 +50,50 @@ header {
   }
 
   model-viewer {
+    animation: modelfly 1s forwards ease-out;
+    animation-delay: 4s;
+    transform: translateX(-350px);
     width: 400px;
     height: 400px;
   }
 }
 
 footer {
+  display: flex;
+  justify-content: space-around;
+  max-width: $container-width;
+  margin: 0 auto;
   height: 5vh;
+  color: $main-color;
+  a {
+    color: $main-color;
+  }
+}
+
+@keyframes h1fly {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  80% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes modelfly {
+  0% {
+    transform: translateX(-350px);
+  }
+
+  50% {
+    transform: translateX(-350px);
+  }
+
+  100% {
+    display: block;
+    transform: translateX(0);
+  }
 }
