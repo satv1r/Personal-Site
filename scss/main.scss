@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #455a64;
+  background-color: $background;
 }
 
 header {
@@ -22,8 +22,27 @@ header {
     align-items: center;
 
     .text {
+      font-family: "Crete Round", serif;
       h1 {
-        font-size: 10rem;
+        font-size: 12rem;
+        color: $main-color;
+      }
+
+      .subtext {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        p {
+          color: $main-color;
+          display: inline-block;
+        }
+        .icons {
+          i {
+            color: $main-color;
+            display: inline-block;
+            padding: 0 0.5rem;
+          }
+        }
       }
     }
   }
