@@ -60,6 +60,10 @@ header {
       width: 500px;
       height: 500px;
       text-align: left; }
+    header .container #model-viewerP {
+      display: none; }
+    header .container #model-viewerD {
+      display: block; }
   header .header-particles {
     position: fixed;
     top: 0;
@@ -73,6 +77,7 @@ footer {
   justify-content: space-around;
   max-width: 1280px;
   margin: 0 auto;
+  text-align: center;
   height: 5vh;
   color: #f5f5f5; }
   footer a {
@@ -122,7 +127,7 @@ footer {
 
 @media (max-width: 500px) {
   header {
-    height: 95vh; }
+    height: 85vh; }
     header .container {
       flex-direction: column;
       justify-content: space-evenly;
@@ -134,11 +139,15 @@ footer {
         font-size: 1rem; }
       header .container model-viewer {
         width: 300px;
-        height: 300px; } }
+        height: 300px; }
+      header .container #model-viewerD {
+        display: none; }
+      header .container #model-viewerP {
+        display: block; } }
 
 @media (max-width: 330px) {
   header {
-    height: 90vh; }
+    height: 80vh; }
     header .container {
       flex-direction: column;
       justify-content: space-evenly;
@@ -150,4 +159,8 @@ footer {
         font-size: 1rem; }
       header .container model-viewer {
         width: 200px;
-        height: 200px; } }
+        height: 200px; }
+      header .container #model-viewerD {
+        display: none; }
+      header .container #model-viewerP {
+        display: block; } }

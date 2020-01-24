@@ -76,6 +76,12 @@ header {
       height: 500px;
       text-align: left;
     }
+    #model-viewerP {
+      display: none;
+    }
+    #model-viewerD {
+      display: block;
+    }
   }
 
   .header-particles {
@@ -93,6 +99,7 @@ footer {
   justify-content: space-around;
   max-width: $container-width;
   margin: 0 auto;
+  text-align: center;
   height: 5vh;
   color: $main-color;
   a {
