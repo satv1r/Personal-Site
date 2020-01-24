@@ -127,7 +127,7 @@ footer {
 
 @media (max-width: 500px) {
   header {
-    height: 85vh; }
+    height: 75vh; }
     header .container {
       flex-direction: column;
       justify-content: space-evenly;
@@ -147,7 +147,7 @@ footer {
 
 @media (max-width: 330px) {
   header {
-    height: 80vh; }
+    height: 70vh; }
     header .container {
       flex-direction: column;
       justify-content: space-evenly;
