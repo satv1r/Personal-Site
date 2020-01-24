@@ -61,10 +61,6 @@ header {
       width: 500px;
       height: 500px;
       text-align: left; }
-    header .container #model-viewerP {
-      display: none; }
-    header .container #model-viewerD {
-      display: block; }
   header .header-particles {
     position: fixed;
     top: 0;
@@ -140,11 +136,7 @@ footer {
         font-size: 1rem; }
       header .container model-viewer {
         width: 300px;
-        height: 300px; }
-      header .container #model-viewerD {
-        display: none; }
-      header .container #model-viewerP {
-        display: block; } }
+        height: 300px; } }
 
 @media (max-width: 330px) {
   header {
@@ -160,8 +152,4 @@ footer {
         font-size: 1rem; }
       header .container model-viewer {
         width: 200px;
-        height: 200px; }
-      header .container #model-viewerD {
-        display: none; }
-      header .container #model-viewerP {
-        display: block; } }
+        height: 200px; } }
