@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #011627; }
+  background-color: #011627;
+  overflow: hidden; }
 
 header {
   position: relative;
