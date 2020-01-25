@@ -9,6 +9,7 @@
 body {
   background-color: $background;
   overflow: hidden;
+  font-family: "Lato", serif;
 }
 
 header {
@@ -26,7 +27,6 @@ header {
     .text {
       position: relative;
       z-index: 1;
-      font-family: "Crete Round", serif;
       h1 {
         span {
           transition: 3s ease-in-out;
